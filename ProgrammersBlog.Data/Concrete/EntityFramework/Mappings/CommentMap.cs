@@ -28,48 +28,7 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(c => c.IsDeleted).IsRequired();
             builder.Property(c => c.Note).HasMaxLength(500);
             builder.ToTable("Comments");
-
-            builder.HasData(
-                new Comment
-                {
-                    Id = 1,
-                    ArticleId = 1,
-                    Text = "Bu bir yorum içeriğidir. Yani kısacası test içeriğidir.",
-                    IsActive = true,
-                    IsDeleted = false,
-                    CreatedByName = "InitialCreate",
-                    CreatedDate = DateTime.Now,
-                    ModifiedByName = "InitialCreate",
-                    ModifiedDate = DateTime.Now,
-                    Note = "Yorum",
-                },
-                new Comment
-                {
-                    Id = 2,
-                    ArticleId = 2,
-                    Text = "Bu bir yorum içeriğidir 2. içerik için. Yani kısacası test içeriğidir.",
-                    IsActive = true,
-                    IsDeleted = false,
-                    CreatedByName = "InitialCreate",
-                    CreatedDate = DateTime.Now,
-                    ModifiedByName = "InitialCreate",
-                    ModifiedDate = DateTime.Now,
-                    Note = "Yorum 2",
-                },
-                new Comment
-                {
-                    Id = 3,
-                    ArticleId = 3,
-                    Text = "Bu bir yorum içeriğidir 3. içerik için. Yani kısacası test içeriğidir.",
-                    IsActive = true,
-                    IsDeleted = false,
-                    CreatedByName = "InitialCreate",
-                    CreatedDate = DateTime.Now,
-                    ModifiedByName = "InitialCreate",
-                    ModifiedDate = DateTime.Now,
-                    Note = "Yorum 3",
-                }
-            );
+            
         }
     }
 }
